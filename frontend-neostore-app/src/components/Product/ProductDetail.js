@@ -1,15 +1,16 @@
 import React,{useState,useEffect} from 'react'
 import {useNavigate ,useParams} from 'react-router-dom'
-import { Container,Col,Row, Button,} from 'react-bootstrap'
 import { getProduct } from '../../config/NodeService'
 import StarRatings from 'react-star-ratings';
 import {FaShareAlt} from 'react-icons/fa'
 import Tabs, { TabPane } from 'rc-tabs';
-import '../../../node_modules/rc-tabs/assets/index.css';
 import ReactImageMagnify from 'react-image-magnify';
 import Magnifier from "react-magnifier";
-import './pro.css'
 import { useDispatch, useSelector } from "react-redux";
+import '../../../node_modules/rc-tabs/assets/index.css';
+import { Container,Col,Row, Button,} from 'react-bootstrap'
+import './pro.css'
+
 
 function ProductDetail() {
     const [singleProd,setSingleProd] = useState([])
@@ -19,7 +20,6 @@ function ProductDetail() {
     let { id } = useParams();
     const dispatch = useDispatch();
     const navigate = useNavigate()
-
 
     useEffect(()=>{
         let t = localStorage.getItem("token")
@@ -174,7 +174,7 @@ function ProductDetail() {
                             <hr/>
                             <h3>Price : ₹ {item.product_cost}.00</h3>
                             <br/>
-                            <div><b>Color :</b><div id="circle" style={{background:`${item.color_id.color_code}`, display:'inline-block', border:"solid 2px"}}></div></div>
+                            <div><span><b>Color :</b></span><div style={{display:"inline-block"}}><span id="circle" style={{background:`${item.color_id.color_code}`, border:"solid 2px"}}></span></div></div>
                             <br/>
                             <div><b>Share &nbsp;</b><span><FaShareAlt/></span>
                             <div className="col-xs-12 col-sm-4 col-md-4">

@@ -20,8 +20,11 @@ function Profile() {
         else{
             let user=JSON.parse(localStorage.getItem('user'));
             getCustomer(user.email)
+
             .then(res=>{
+                console.log(res.data.success)
                 if(res.data.success===true){
+                    
                     setUser({...user,email:res.data.data.email,fname:res.data.data.fname,lname:res.data.data.lname,mobile:res.data.data.mobile,gender:res.data.data.gender,image:res.data.data.logo,dob:res.data.data.dob})
                     console.log(res.data.data.logo)
                     if(res.data.data.logo===undefined){

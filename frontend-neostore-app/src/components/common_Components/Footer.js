@@ -31,19 +31,19 @@ function Footer() {
                                 <h5 className="widget-title">Information<span></span></h5>
                                 <ul className="thumbnail-widget">
                                     <li>
-                                        <div className="thumb-content"><Link to={pdf} target="_blank" rel='noreferrer'>&nbsp;Terms and Conditions</Link></div>
+                                        <div className="thumb-content"><Link to={pdf} target="_blank" rel='noreferrer'  className="share_link">&nbsp;Terms and Conditions</Link></div>
                                     </li>
                                     <li>
-                                        <div className="thumb-content"><Link to={pdf} target="_blank" rel='noreferrer'>&nbsp;Guarantee and Return Policy</Link></div>
+                                        <div className="thumb-content"><Link to={pdf} target="_blank" rel='noreferrer'  className="share_link">&nbsp;Guarantee and Return Policy</Link></div>
                                     </li>
                                     <li>
-                                        <div className="thumb-content"><Link to="#.">&nbsp;Contact Us</Link></div>
+                                        <div className="thumb-content" ><Link to="#."  className="share_link">&nbsp;Contact Us</Link></div>
                                     </li>
                                     <li>
-                                        <div className="thumb-content"><a href={pdf} target="_blank" rel='noreferrer'>&nbsp;Privacy Policy</a></div>
+                                        <div className="thumb-content"><a href={pdf} target="_blank" rel='noreferrer'  className="share_link">&nbsp;Privacy Policy</a></div>
                                     </li>
                                     <li>
-                                        <div className="thumb-content"><a href="https://goo.gl/maps/uiXfxVRsgty84qMd8" target="_blank" rel='noreferrer'>&nbsp;Locate Us</a></div>
+                                        <div className="thumb-content"><Link to="https://goo.gl/maps/uiXfxVRsgty84qMd8"  className="share_link" target="_blank" rel='noreferrer'>&nbsp;Locate Us</Link></div>
                                     </li>
                                 </ul>
                             </div>
@@ -51,10 +51,10 @@ function Footer() {
                         <div className="col-xs-12 col-sm-6 col-md-3">
                             <div className="widget no-box">
                                 <h5 className="widget-title">Follow up<span></span></h5>
-                                <a href="https://www.facebook.com/neosofttechnologies" target="_blank" rel='noreferrer'> <i className="fa fa-facebook"> </i> </a>
-                                <a href='https://in.linkedin.com/company/neosoft-technologies' target="_blank" rel='noreferrer'><i className="fa fa-linkedin"></i></a>
-                                <a href="https://twitter.com/neosofttech" target="_blank" rel='noreferrer'> <i className="fa fa-twitter"> </i> </a>
-                                <a href="https://www.youtube.com/channel/UCRCbn5adUPg5QFCB-Rw7L7w/featured" target="_blank" rel='noreferrer'> <i className="fa fa-youtube"> </i> </a>
+                                <a href="https://www.facebook.com/neosofttechnologies" className="share_link" target="_blank" rel='noreferrer'> <i className="fa fa-facebook"> </i> </a>
+                                <a href='https://in.linkedin.com/company/neosoft-technologies'  className="share_link" target="_blank" rel='noreferrer'><i className="fa fa-linkedin"></i></a>
+                                <a href="https://twitter.com/neosofttech" target="_blank"  className="share_link" rel='noreferrer'> <i className="fa fa-twitter"> </i> </a>
+                                <a href="https://www.youtube.com/channel/UCRCbn5adUPg5QFCB-Rw7L7w/featured"  className="share_link" target="_blank" rel='noreferrer'> <i className="fa fa-youtube"> </i> </a>
                             </div>
                         </div>
                         <br/>
@@ -64,7 +64,7 @@ function Footer() {
                                 <h5 className="widget-title">Newsletter<span></span></h5>
                                 <p>Join our mailing list and get a code for 10% off your first purchase. We promise not to spam you, and you can opt out whenever you like.</p>
                                 <div className="emailfield">
-                                    <input className="input" type="text" name="email" placeholder="email"/>
+                                    <input className="input" type="text" name="email" placeholder="Email"/>
                                     <input className="input" name="uri" type="hidden" value="arabiantheme"/>
                                     <input className="input" name="loc" type="hidden" value="en_US"/>
                                     <input className="submitbutton ripplelink" type="submit" onClick={subscribe} value="Subscribe"/>

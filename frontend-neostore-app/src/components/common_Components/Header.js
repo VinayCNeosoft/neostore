@@ -1,6 +1,7 @@
 import React,{useState,useEffect,useRef} from 'react';
-import {Button, Container, Form, FormControl, Nav, Navbar, NavDropdown} from 'react-bootstrap';
+import {Button, Container, Form, FormControl, InputGroup, Nav, Navbar, NavDropdown} from 'react-bootstrap';
 import { FaSearch,FaShoppingCart,FaUserCircle} from 'react-icons/fa';
+import {FcSearch} from 'react-icons/fc'
 import { useNavigate ,Link,NavLink} from 'react-router-dom';
 import {useDispatch,useSelector} from 'react-redux'
 import { addToCart } from '../../config/NodeService';
@@ -85,7 +86,7 @@ function Header(props) {
     if (!user) {
         return (
         <>
-            <Navbar collapseOnSelect expand="lg" style={{background:"black"}} variant="dark">
+            <Navbar collapseOnSelect expand="md" style={{background:"black"}} variant="dark">
             <Container>
             <Navbar.Brand><Link to="/" style={{textDecoration:"none",color:"white"}}>Neo<span className='text-danger'>STORE</span></Link></Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -99,8 +100,12 @@ function Header(props) {
                 {/* <Button variant="outline-success" style={{marginLeft:"10px"}} size='sm' onClick={gotoSearch}><FaSearch/></Button> */}
 
                 <Form className="d-flex">
-                    <FormControl type="text"
-                    onChange={event => query(event.target.value)} placeholder="Search" name="search" className="me-2" aria-label="Search"/>
+                    <InputGroup >
+                        <InputGroup.Text id="basic-addon1"><FcSearch/></InputGroup.Text>
+                        <FormControl type="text"
+                        onChange={event => query(event.target.value)} placeholder="Search..." name="search"
+                        className="me-2" aria-label="Search"/>
+                    </InputGroup>
                 </Form>
                 <Button style={{marginLeft:"10px"}} variant='outline-success' size='sm' onClick={()=>goCart()}><FaShoppingCart /> Cart &nbsp; {count} </Button>
                 <Button variant='outline-danger'style={{marginLeft:"10px"}} size='sm' >
@@ -135,8 +140,13 @@ function Header(props) {
                 {/* <Button variant="outline-success" style={{marginLeft:"10px"}} size='sm' onClick={gotoSearch}><FaSearch/></Button> */}
 
                 <Form className="d-flex">
-                <FormControl type="text"
-                   onChange={event => query(event.target.value)} placeholder="Search" name="search" className="me-2" aria-label="Search"/>  </Form>
+                    <InputGroup >
+                        <InputGroup.Text id="basic-addon1"><FcSearch/></InputGroup.Text>
+                        <FormControl type="text"
+                        onChange={event => query(event.target.value)} placeholder="Search..." name="search"
+                        className="me-2" aria-label="Search"/>
+                    </InputGroup>
+                </Form>
                 <Button style={{marginLeft:"10px"}} variant='outline-success' size='sm' onClick={()=>goCart()}><FaShoppingCart /> Cart &nbsp; {count}</Button>
                 <Button variant='outline-danger'style={{marginLeft:"10px"}} size='sm' >
                     <NavDropdown title={<FaUserCircle/>} id="collasible-nav-dropdown" >

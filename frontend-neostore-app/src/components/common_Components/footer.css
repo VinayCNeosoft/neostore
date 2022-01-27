@@ -5,7 +5,7 @@ footer .main-footer{
     right: 0;
     bottom: 0;
     left: 0; */
-    margin-top: 1rem;
+    margin-top: 0rem;
     padding: 1rem;
     position: relative;
     bottom: 0;
@@ -95,6 +95,7 @@ footer.light .footer-copyright{
     margin-bottom: 0px;
 }
 .widget.no-box{
+    text-decoration: none;
     padding: 0;
     background-color: transparent;
     margin-bottom: 40px;
@@ -117,14 +118,14 @@ footer.light .footer-copyright{
 .widget-title {
     margin-bottom: 20px;
 }
-.widget-title span {
+/* .widget-title span {
     background: #839FAD none repeat scroll 0 0;
     display: block;
     height: 1px;
     margin-top: 25px;
     position: relative;
-    width: 20%;
-}
+    width: 40%;
+} */
 .widget-title span::after {
     background: inherit;
     content: "";
@@ -190,9 +191,9 @@ transition: all 250ms ease-in-out 0s;
 }
 
 .input[type="text"] {
-    background: rgba(255,255,255,0.075);
+    background: gainsboro;
     padding: 10px 15px;
-    color: #aaa;
+    color: black;
     border: 3px solid rgba(0,0,0,0.1);
     font-size: 14px;
     margin-bottom: 16px;
@@ -221,11 +222,14 @@ input.submitbutton.ripplelink {
 }
 
 .thumb-content ::before {
-    content: "\f190";
+    content: "\f0a9";
     font-family: FontAwesome;
     font-style: normal;
     font-weight: normal;
     text-decoration: inherit;
     margin-left: 5px;
     color: #ffffff;
+}
+.share_link{
+    text-decoration: none;
 }

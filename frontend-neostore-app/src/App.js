@@ -23,6 +23,7 @@ import Checkout from './components/Product/Checkout';
 import PlaceOrder from './components/Product/PlaceOrder';
 import Orders from './components/Product/Orders';
 import Search from './components/Product/Search';
+import LocateUs from './components/common_Components/LocateUs';
 
 function App() {
   const [search,setSearch] = useState('')
@@ -52,6 +53,7 @@ function App() {
       <Route path="/checkout" element={<Checkout/>}/>
       <Route path="/placeorder" element={<PlaceOrder/>}/>
       <Route path="/order" element={<Orders/>}/>
+      <Route path="/locateus" exact={<LocateUs/>}/>
     </Routes>
       <Footer/>
     </Router>

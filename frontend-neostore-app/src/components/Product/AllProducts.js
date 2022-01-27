@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {FaStar,FaArrowAltCircleUp,FaArrowCircleDown} from 'react-icons/fa'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import './pro.css'
 
 function AllProducts(props) {
     const { search } = props
@@ -202,7 +203,8 @@ function AllProducts(props) {
 
     return (
         <>
-            <>
+            {/* <Container fluid style={{backgroundImage:`url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.hdqwalls.com%2Fwallpapers%2Ftexture-dark-gradient-5k-px.jpg&f=1&nofb=1")`,backgroundSize: "cover",backgroundPosition:"center",paddingTop:"3em",paddingBottom:"3em"}}> */}
+
             <h1 className='text-center text-danger'>All Products</h1>
             <hr/>
             <Container>
@@ -215,11 +217,11 @@ function AllProducts(props) {
                     </span>
                 </div>
                 <Col xs={4} md={2}>
-                <ListGroup>
+                <ListGroup className='accordion_body'>
                     <ListGroup.Item action onClick={getAllProd} >All Product</ListGroup.Item>
                 </ListGroup>
                 <br/>
-                <Accordion defaultActiveKey={['0']} alwaysopen="true">
+                <Accordion defaultActiveKey={['0']} alwaysopen="true" className='accordion_body'>
                     <Accordion.Item eventKey="0">
                         <Accordion.Header>Categories</Accordion.Header>
                         <Accordion.Body>
@@ -233,7 +235,7 @@ function AllProducts(props) {
                     </Accordion.Item>
                 </Accordion>
                 <br/>
-                <Accordion defaultActiveKey={['0']} alwaysopen="true">
+                <Accordion defaultActiveKey={['0']} alwaysopen="true" className='accordion_body'>
                     <Accordion.Item eventKey="0">
                         <Accordion.Header>Color</Accordion.Header>
                         <Accordion.Body>
@@ -263,7 +265,7 @@ function AllProducts(props) {
                         </Link>
                         <Card.Body>
                         <Card.Title style={{height:"70px"}}>{ele.product_name}</Card.Title>
-                            <div style={{float:"right",display:"block"}}>
+                            <div style={{float:"left",display:"block"}}>
                                 <Card.Text>
                                     <b>₹ {ele.product_cost}/-</b>
                                 </Card.Text>
@@ -304,7 +306,7 @@ function AllProducts(props) {
             </Container>
             <hr/>
             <br/>
-            </>
+            {/* </Container> */}
         </>
     )
 }

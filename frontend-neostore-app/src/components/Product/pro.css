@@ -48,10 +48,12 @@
 }
 
 #circle {
-    margin-left: 20px;
+    margin-left: 25px;
     width: 25px;
     height: 25px;
-    border-radius: 50%
+    border-radius: 50%;
+    display: inline-block;
+    padding: 10px;
 }
 
 /* RC TABS START */
@@ -97,4 +99,24 @@
   display:inline;
   margin:0px 0px 10px 10px;
   background-color:white;
+}
+
+
+.card_prod{
+  box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+  backdrop-filter: blur(1px);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  color: lightgrey;
+}
+.card_prod img{
+  border-radius: 20px;
+}
+
+.accordion_body{
+  box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+  backdrop-filter: blur(1px);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  color: lightgrey;
 }

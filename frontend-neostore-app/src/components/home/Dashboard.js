@@ -4,7 +4,7 @@ import { Container, Button, Card,Row,Col} from 'react-bootstrap'
 import { commonProduct ,fetchCartArray} from '../../config/NodeService'
 import StarRatings from 'react-star-ratings';
 import { useDispatch } from "react-redux";
-
+import './home.css'
 import Banner from './Banner'
 
 function Dashboard(props) {
@@ -54,9 +54,7 @@ function Dashboard(props) {
                 return sum
             })
             setArraylen(sum)
-            
         }
-        
     },[])
 
     const getData=()=>{
@@ -140,13 +138,15 @@ function Dashboard(props) {
         <>
         <Container fluid="true">
             <Banner/>
-            <br/>
-            <h2 className='text-center'>Popular Products</h2>
         </Container>
+            {/* <Container fluid style={{backgroundImage:`url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.hdqwalls.com%2Fwallpapers%2Ftexture-dark-gradient-5k-px.jpg&f=1&nofb=1")`,backgroundSize: "cover",backgroundPosition:"center",paddingTop:"3em",paddingBottom:"3em"}}> */}
 
             <Container className='mx-auto my-2 justify-content-md-center justify-content-lg-center'>
+
+            <h2 className='text-center text-warning'>Popular Products</h2>
+
             <hr/>
-            <Row xs={1} md={2} lg={3} className="g-4 my-1">
+            <Row xs={1} md={2} lg={4} className="g-4 my-1">
             {fetchAllProd.filter(ele => {
                 if(ele.product_name.toLowerCase().includes(search.toLowerCase())) return ele
                 return null
@@ -158,7 +158,7 @@ function Dashboard(props) {
                     </Link>
                     <Card.Body>
                         <Card.Title style={{height:"70px"}}>{ele.product_name}</Card.Title>
-                            <div style={{float:"right",display:"block"}}>
+                            <div style={{display:"block"}}>
                                 <Card.Text>
                                     <b>₹ {ele.product_cost}/-</b>
                                 </Card.Text>
@@ -173,7 +173,7 @@ function Dashboard(props) {
                                     starRatedColor="orange"
                                     numberOfStars={5}
                                     name='rating'
-                                    starDimension="30px"
+                                    starDimension="25px"
                                 />
                                 </Container>
                             </div>
@@ -182,10 +182,12 @@ function Dashboard(props) {
                     </Col>
                 ))}
                 </Row>
-            </Container>
+            </Container><br/>
             <div className='text-center'>
-                <h4><Link to="/commonproduct">View More...</Link></h4>
+                <h4><Link to="/commonproduct" className="share_link">Show More</Link></h4>
             </div>
+            {/* </Container> */}
+
         </>
     )
 }
